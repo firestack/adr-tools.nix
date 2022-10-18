@@ -6,8 +6,8 @@
 } @ args:
 
 stdenv.mkDerivation rec {
-  name = "adr-tools-${version}";
   version = "3.0.0";
+  pname = "adr-tools";
 
   src = fetchFromGitHub {
     owner = "npryce";
