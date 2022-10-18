@@ -3,18 +3,19 @@
 , fetchFromGitHub
 , getopt
 , bashInteractive
+, ...
 } @ args:
 
 stdenv.mkDerivation rec {
-  version = "3.0.0";
   pname = "adr-tools";
+  version = args.version or "3.0.0";
 
-  src = fetchFromGitHub {
+  src = args.src or (fetchFromGitHub {
     owner = "npryce";
     repo = "adr-tools";
     rev = "${version}";
     sha256 = "1igssl6853wagi5050157bbmr9j12703fqfm8cd7gscqwjghnk14";
-  };
+  });
 
   postPatch = ''
     substituteInPlace Makefile --replace '/bin:/usr/bin' '$(PATH)'
