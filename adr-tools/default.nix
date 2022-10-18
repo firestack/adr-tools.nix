@@ -1,4 +1,9 @@
-{ stdenv, fetchFromGitHub, getopt, bashInteractive }:
+{ lib
+, stdenv
+, fetchFromGitHub
+, getopt
+, bashInteractive
+} @ args:
 
 stdenv.mkDerivation rec {
   name = "adr-tools-${version}";
