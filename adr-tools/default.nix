@@ -20,6 +20,7 @@ stdenv.mkDerivation rec {
 
   propagatedBuildInputs = [ getopt bashInteractive ];
 
+  dontBuild = true;
 
   doCheck = true;
 
