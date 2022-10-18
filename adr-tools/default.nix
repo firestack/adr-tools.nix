@@ -17,21 +17,12 @@ stdenv.mkDerivation rec {
     sha256 = "1igssl6853wagi5050157bbmr9j12703fqfm8cd7gscqwjghnk14";
   });
 
-  postPatch = ''
-    substituteInPlace Makefile --replace '/bin:/usr/bin' '$(PATH)'
-  '';
 
   propagatedBuildInputs = [ getopt bashInteractive ];
 
-  buildPhase = ''
-    patchShebangs src/
-  '';
 
   doCheck = true;
 
-  checkPhase = ''
-    make check
-  '';
 
   installPhase = ''
     mkdir -p $out/bin/
