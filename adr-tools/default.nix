@@ -29,7 +29,7 @@ stdenv.mkDerivation rec {
     cp src/* $out/bin/
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     homepage = https://github.com/npryce/adr-tools;
     description = "Command-line tools for working with Architecture Decision Records";
     license = licenses.gpl3;
