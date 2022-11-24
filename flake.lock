@@ -1,0 +1,57 @@
+{
+  "nodes": {
+    "adr-tools-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1532543240,
+        "narHash": "sha256-JEwLn+SY6XcaQ9VhN8ARQaZc1zolgAJKfIqPggzV+sU=",
+        "owner": "npryce",
+        "repo": "adr-tools",
+        "rev": "b47d3837d452ca6d2509d2524c7a08c701e84367",
+        "type": "github"
+      },
+      "original": {
+        "owner": "npryce",
+        "ref": "3.0.0",
+        "repo": "adr-tools",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 0,
+        "narHash": "sha256-UK4urM3iN80UXQ7EaOappDzcisYIuEURFRoGQ/yPkug=",
+        "path": "/nix/store/7mr2ym0xcp0jm82p9pljvz6in1179h88-source",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "adr-tools-src": "adr-tools-src",
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
